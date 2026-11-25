@@ -1,0 +1,184 @@
+/* =========================
+   Google Fonts
+========================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap");
+
+/* =========================
+   Tailwind CSS
+========================= */
+
+@import "tailwindcss";
+
+/* =========================
+   Theme: Colors & Fonts
+========================= */
+
+@theme {
+  /* Fonts */
+  --font-sans: "Tajawal", sans-serif;
+  --font-tajawal: "Tajawal", sans-serif;
+
+  /* Brand Colors */
+  --color-primary: #3988c9;
+  --color-primary-hover: #24669e;
+  --color-navy: #17324d;
+  --color-heading: #172b3a;
+
+  /* Backgrounds */
+  --color-header: #eaf6ff;
+  --color-body: #ffffff;
+  --color-footer: #17324d;
+  --color-card-hover: #f5faff;
+  --color-accent: #b9e3ff;
+
+  /* Text */
+  --color-text: #172b3a;
+  --color-text-secondary: #64748b;
+  --color-footer-text: #d5e3ef;
+
+  /* UI */
+  --color-border: #d8dee5;
+  --color-input-bg: #ffffff;
+}
+
+/* =========================
+   Global Styles
+========================= */
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Tajawal", sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    color: #172b3a;
+    background-color: #ffffff;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font-family: inherit;
+  }
+
+  h2 {
+    letter-spacing: -0.7px;
+    font-weight: 400;
+  }
+}
+
+/* =========================
+   Links
+========================= */
+
+@layer base {
+  a {
+    color: #24669e;
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: #3988c9;
+  }
+}
+
+/* =========================
+   Forms & Inputs
+========================= */
+
+@layer base {
+  label {
+    display: flex;
+    color: #172b3a;
+  }
+
+  button {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  form button {
+    width: 100px;
+    padding: 4px 8px;
+    background-color: #3988c9;
+    color: #ffffff;
+    transition: background-color 0.2s ease;
+  }
+
+  form button:hover {
+    background-color: #24669e;
+  }
+
+  form button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+  }
+
+  select {
+    margin-left: 5px;
+    border: 1px solid #d8dee5;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #172b3a;
+  }
+
+  select:disabled,
+  input:disabled {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+  }
+}
+
+/* =========================
+   Helpers
+========================= */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.sign-form-error-message {
+  color: #dc3545;
+  border-radius: 4px;
+  text-align: center;
+}
+
+/* =========================
+   Animations
+========================= */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
